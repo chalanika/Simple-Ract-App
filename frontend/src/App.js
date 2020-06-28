@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/navbar';
 import Counters from './components/counters';
 
-function App() {
+
+class App extends Component {
   state = {
     counters: [
       { id: 1, value: 4 },
@@ -36,19 +37,22 @@ function App() {
       return c;
     });
   }
-  return (
-    <div className="App">
-      <Navbar />
-      <main className="container m-5">
-        <Counters
-          counters = {this.state.counters}
-          onDelete = {this.handleDelete}
-          onReset = {this.handleReset}
-          onIncrement = {this.handleIncrement}
-        />
-      </main>
-    </div>
-  );
+
+  render() {
+    return (
+      <div>
+        <Navbar />
+        <main className="container m-5">
+          <Counters
+            counters={this.state.counters}
+            onDelete={this.handleDelete}
+            onReset={this.handleReset}
+            onIncrement={this.handleIncrement}
+          />
+        </main>
+      </div >
+    );
+  }
 }
 
 export default App;
