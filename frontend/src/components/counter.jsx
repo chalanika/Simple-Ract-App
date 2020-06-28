@@ -11,7 +11,7 @@ class Counter extends Component {
         fontWeight:"bold"
     }
     // constructor(){
-    //     super();
+    //     super(); 
     //     this.handleIncrement=this.handleIncrement.bind(this);
     // }
 

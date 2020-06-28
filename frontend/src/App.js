@@ -41,7 +41,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar />
+        <Navbar 
+          totalCounters ={this.state.counters.filter(c=> c.value !== 0).length}
+        />
         <main className="container m-5">
           <Counters
             counters={this.state.counters}
