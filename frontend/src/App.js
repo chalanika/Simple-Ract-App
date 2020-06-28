@@ -41,6 +41,13 @@ class App extends Component {
     this.setState({ counters });
   }
 
+  handleDecrement = counter =>{
+    const counters = [...this.state.counters];
+    const index = counters.indexOf(counter);
+    counters[index].value--;
+    this.setState({counters});
+  }
+
 
   handleDelete = id => {
     console.log('Event Handler called', id);
@@ -68,6 +75,7 @@ class App extends Component {
             onDelete={this.handleDelete}
             onReset={this.handleReset}
             onIncrement={this.handleIncrement}
+            onDecrement={this.handleDecrement}
           />
         </main>
       </div >
