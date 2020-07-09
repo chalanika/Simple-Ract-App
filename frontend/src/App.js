@@ -4,6 +4,8 @@ import './App.css';
 import Navbar from './components/navbar';
 import Counters from './components/counters';
 import MyApp from './components/MyApp';
+import ReactDateTimePicker from './components/ReactDatePicker';
+import Test from './components/test';
 
 
 class App extends Component {
@@ -78,7 +80,8 @@ class App extends Component {
             onIncrement={this.handleIncrement}
             onDecrement={this.handleDecrement}
           /> */}
-          <MyApp />
+          {/* <MyApp /> */} 
+          <Test/>
         </main>
       </div >
     );
