@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import Calendar from  'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 
@@ -17,5 +17,21 @@ class MyApp extends Component {
     );
   }
 }
+
+// functional Component
+// const MyApp = ()=>{
+//   const [date,setDate] = useState(new Date());
+
+//   onChange = date => {
+//    setDate(date)
+//   }
+
+//   return(
+//     <Calendar onChange={onChange} value={date} />
+//   )
+  
+// }
+
+
 
 export default MyApp;
