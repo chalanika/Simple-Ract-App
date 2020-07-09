@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/navbar';
 import Counters from './components/counters';
+import MyApp from './components/MyApp';
 
 
 class App extends Component {
@@ -70,13 +71,14 @@ class App extends Component {
           totalCounters ={this.state.counters.filter(c=> c.value !== 0).length}
         />
         <main className="container m-5">
-          <Counters
+          {/* <Counters
             counters={this.state.counters}
             onDelete={this.handleDelete}
             onReset={this.handleReset}
             onIncrement={this.handleIncrement}
             onDecrement={this.handleDecrement}
-          />
+          /> */}
+          <MyApp />
         </main>
       </div >
     );
